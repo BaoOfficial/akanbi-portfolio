@@ -1,0 +1,125 @@
+.header_cont{
+    /* border: 2px solid; */
+    width: 100%;
+}
+
+.header_cont .inner_header {
+    /* border: 2px solid; */
+    background-color: #47034E;
+    color: white;
+    width: 100%;
+    margin: auto;
+    padding: 1rem 8rem;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.inner_header .logo {
+    font-family: 'Vampiro One', sans-serif;
+    font-size: 1.5rem;
+}
+
+.inner_header .nav_port {
+    /* border: 2px solid yellow; */
+    display: flex;
+    gap: 4rem;
+}
+
+.header_cont ul {
+    /* border: 1px solid; */
+    display: flex;
+    gap: 2rem;
+}
+
+.header_cont .list {
+    margin: auto;
+    font-size: 14px;
+}
+
+.active {
+    font-size: 16px;
+    color: #7e3285;
+    font-weight: 700;
+    border-bottom: 1px solid #7e3285;
+}
+
+.header_cont .list:hover {
+    color: #7e3285;
+}
+
+.btn_1 {
+    outline: none;
+    border: none;
+    background-color: #7e3285;
+    color: white;
+    padding: 0px 20px;
+    border-radius: 5px;
+}
+
+.btn_1:hover {
+    background-color: #520380;
+}
+
+.menu_icon {
+    display: none;
+    cursor: pointer;
+}
+
+/* .header_cont .nav_port_2 {
+    border: 2px solid yellow;
+    display: none;
+    gap: 4rem;
+    height: 100px;
+} */
+
+.header_cont .nav_port_2 {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background: white;
+    position: absolute;
+    top: 68px;
+    right: 0;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+
+.nav_port_2.open ul {
+    /* border: 1px solid; */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+/* RESPONSIVENESS =============== */
+@media(max-width:1084px) {
+    .header_cont .inner_header {
+        padding: 1rem 2rem;
+        width: 100%;
+    }
+}
+
+@media(max-width:768px) {
+    .header_cont ul {
+        display: none;
+    }
+
+    .menu_icon {
+        display: block;
+    }
+
+    .header_cont {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header_cont .nav_port_2.open {
+        display: flex;
+        z-index: 2;
+    }
+}
