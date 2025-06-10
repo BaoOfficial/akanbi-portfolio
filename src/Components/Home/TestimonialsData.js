@@ -1,4 +1,4 @@
-import tunde from '../../assets/tunde.jpeg'
+import tunde from '../../assets/Tunde.jpeg'
 
 const testimonialsData = [
   {
