@@ -1,9 +1,12 @@
 import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Image from '../../assets/profileImage.png';
 import AOS from 'aos';
 import taofik from '../../assets/taofik_2.jpg'
 
 const DataScientistProfile = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
         AOS.init({
           once: true,
@@ -62,7 +65,7 @@ const DataScientistProfile = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-[#47034E] hover:bg-[#7e3285] text-white px-5 py-2 rounded transition-colors duration-300 w-full cursor-pointer sm:w-auto">
+              <button className="bg-[#47034E] hover:bg-[#7e3285] text-white px-5 py-2 rounded transition-colors duration-300 w-full cursor-pointer sm:w-auto" onClick={() => navigate('/contact')}>
                 Contact Me
               </button>
               <button className="border-2 border-[#7e3285] text-[#7e3285] hover:bg-[#7e3285] hover:text-white px-5 py-2 rounded transition-colors duration-300 w-full cursor-pointer sm:w-auto">

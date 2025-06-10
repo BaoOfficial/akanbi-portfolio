@@ -49,7 +49,7 @@ const Header = () => {
           <div className="block md:hidden cursor-pointer" onClick={() => setToggleNav(!toggleNav)}>
             {toggleNav ? <FiX size={30} className="text-white" /> : <FiMenu size={30} className="text-white" />} 
           </div>
-          <p className="font-['Vampiro_One'] text-3xl text-white ml-4 md:ml-0">Akanbi</p>
+          <p className="font-['Vampiro_One'] text-xl md:text-3xl text-white ml-4 md:ml-0">Akanbi</p>
         </div>
         
         <div className="hidden md:flex items-center gap-16">

@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import './Home.css'
 import Hero from './Hero'
 import Profile from './Profile'
@@ -9,6 +10,8 @@ import Testimonials from './Testimonials'
 import ProjectsContainer from '../Projects/ProjectsContainer'
 
 const Home = () => {
+  const navigate = useNavigate();
+  
   return (
     <div className='home_cont' id='home'>
         <Hero />
