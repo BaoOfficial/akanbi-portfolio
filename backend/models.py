@@ -27,8 +27,8 @@ class Config:
     COLLECTION_NAME = "taofik_portfolio"
     DATA_FILE = "akandi_data.txt"
     
-    # Model parameters
-    EMBEDDING_MODEL = 'all-MiniLM-L6-v2'
+    # Model parameters - TF-IDF instead of sentence-transformers
+    EMBEDDING_MODEL = 'tfidf'  # Changed from sentence-transformer model
     LLM_MODEL = "mistralai/Mixtral-8x7B-Instruct-v0.1"
     MAX_TOKENS = 150
     TEMPERATURE = 0.7

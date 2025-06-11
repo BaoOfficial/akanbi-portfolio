@@ -2,6 +2,7 @@ chromadb
 fastapi
 pydantic
 python-dotenv
-sentence_transformers
 together
 uvicorn
+scikit-learn
+numpy

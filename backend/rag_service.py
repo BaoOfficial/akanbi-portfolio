@@ -1,18 +1,25 @@
-# rag_service.py - RAG and AI processing logic
+# rag_service.py - Lightweight RAG with TF-IDF embeddings
 import logging
 from typing import List, Dict, Any
 import chromadb
 import together
-from sentence_transformers import SentenceTransformer
+import numpy as np
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+import pickle
+import os
 from models import Config
 
 logger = logging.getLogger(__name__)
 
 class RAGService:
-    """Handles all RAG-related operations"""
+    """Handles all RAG-related operations with lightweight TF-IDF embeddings"""
     
     def __init__(self):
-        self.embedding_model = None
+        self.vectorizer = None
+        self.document_vectors = None
+        self.documents = []  # Store documents for retrieval
+        self.document_metadata = []  # Store metadata
         self.chroma_client = None
         self.collection = None
         self.conversations = {}  # Store conversations in memory
@@ -21,16 +28,25 @@ class RAGService:
         together.api_key = Config.TOGETHER_API_KEY
     
     def initialize_embedding_model(self):
-        """Initialize the sentence transformer model for embeddings"""
+        """Initialize the TF-IDF vectorizer"""
         try:
-            self.embedding_model = SentenceTransformer(Config.EMBEDDING_MODEL)
-            logger.info("Embedding model initialized successfully")
+            # Initialize TF-IDF vectorizer with optimized parameters
+            self.vectorizer = TfidfVectorizer(
+                max_features=1000,  # Limit vocabulary size
+                stop_words='english',
+                ngram_range=(1, 2),  # Unigrams and bigrams
+                max_df=0.8,  # Ignore terms that appear in >80% of docs
+                min_df=2,    # Ignore terms that appear in <2 docs
+                lowercase=True,
+                strip_accents='ascii'
+            )
+            logger.info("TF-IDF vectorizer initialized successfully")
         except Exception as e:
-            logger.error(f"Failed to initialize embedding model: {e}")
+            logger.error(f"Failed to initialize TF-IDF vectorizer: {e}")
             raise
     
     def initialize_chromadb(self):
-        """Initialize ChromaDB and create collection"""
+        """Initialize ChromaDB for metadata storage (vectors stored separately)"""
         try:
             # Initialize ChromaDB with persistent storage
             self.chroma_client = chromadb.PersistentClient(path=Config.CHROMA_DB_PATH)
@@ -80,18 +96,68 @@ class RAGService:
         
         return chunks
     
-    def load_portfolio_data(self):
-        """Load and process the portfolio data into ChromaDB"""
+    def save_vectors(self):
+        """Save TF-IDF vectors to disk"""
         try:
+            vectors_path = os.path.join(Config.CHROMA_DB_PATH, "tfidf_vectors.pkl")
+            vectorizer_path = os.path.join(Config.CHROMA_DB_PATH, "tfidf_vectorizer.pkl")
+            docs_path = os.path.join(Config.CHROMA_DB_PATH, "documents.pkl")
+            
+            os.makedirs(Config.CHROMA_DB_PATH, exist_ok=True)
+            
+            with open(vectors_path, 'wb') as f:
+                pickle.dump(self.document_vectors, f)
+            
+            with open(vectorizer_path, 'wb') as f:
+                pickle.dump(self.vectorizer, f)
+                
+            with open(docs_path, 'wb') as f:
+                pickle.dump({
+                    'documents': self.documents,
+                    'metadata': self.document_metadata
+                }, f)
+                
+            logger.info("TF-IDF vectors and documents saved successfully")
+        except Exception as e:
+            logger.error(f"Failed to save vectors: {e}")
+    
+    def load_vectors(self):
+        """Load TF-IDF vectors from disk"""
+        try:
+            vectors_path = os.path.join(Config.CHROMA_DB_PATH, "tfidf_vectors.pkl")
+            vectorizer_path = os.path.join(Config.CHROMA_DB_PATH, "tfidf_vectorizer.pkl")
+            docs_path = os.path.join(Config.CHROMA_DB_PATH, "documents.pkl")
+            
+            if all(os.path.exists(p) for p in [vectors_path, vectorizer_path, docs_path]):
+                with open(vectors_path, 'rb') as f:
+                    self.document_vectors = pickle.load(f)
+                
+                with open(vectorizer_path, 'rb') as f:
+                    self.vectorizer = pickle.load(f)
+                    
+                with open(docs_path, 'rb') as f:
+                    data = pickle.load(f)
+                    self.documents = data['documents']
+                    self.document_metadata = data['metadata']
+                
+                logger.info(f"Loaded {len(self.documents)} documents from disk")
+                return True
+            return False
+        except Exception as e:
+            logger.error(f"Failed to load vectors: {e}")
+            return False
+    
+    def load_portfolio_data(self):
+        """Load and process the portfolio data"""
+        try:
+            # Try to load existing vectors first
+            if self.load_vectors():
+                logger.info("Using existing TF-IDF vectors")
+                return
+            
             # Read the portfolio data file
             with open(Config.DATA_FILE, "r", encoding="utf-8") as file:
                 portfolio_text = file.read()
-            
-            # Check if collection already has data
-            existing_count = self.collection.count()
-            if existing_count > 0:
-                logger.info(f"Collection already contains {existing_count} documents")
-                return
             
             # Split into sections based on headers
             sections = []
@@ -122,69 +188,67 @@ class RAGService:
                     'content': current_section.strip()
                 })
             
-            # Process each section and add to ChromaDB
-            all_chunks = []
-            all_metadatas = []
-            all_ids = []
+            # Process each section and create documents
+            self.documents = []
+            self.document_metadata = []
             
             for i, section in enumerate(sections):
                 # Create chunks from the section
                 chunks = self.chunk_text(section['content'])
                 
                 for j, chunk in enumerate(chunks):
-                    chunk_id = f"section_{i}_chunk_{j}"
-                    all_chunks.append(chunk)
-                    all_metadatas.append({
+                    self.documents.append(chunk)
+                    self.document_metadata.append({
                         'section_title': section['title'],
                         'chunk_index': j,
-                        'section_index': i
+                        'section_index': i,
+                        'id': f"section_{i}_chunk_{j}"
                     })
-                    all_ids.append(chunk_id)
             
-            # Generate embeddings for all chunks
-            logger.info("Generating embeddings for portfolio data...")
-            embeddings = self.embedding_model.encode(all_chunks).tolist()
+            # Generate TF-IDF vectors
+            logger.info("Generating TF-IDF vectors for portfolio data...")
+            self.document_vectors = self.vectorizer.fit_transform(self.documents)
             
-            # Add to ChromaDB
-            self.collection.add(
-                documents=all_chunks,
-                embeddings=embeddings,
-                metadatas=all_metadatas,
-                ids=all_ids
-            )
+            # Save vectors to disk
+            self.save_vectors()
             
-            logger.info(f"Successfully loaded {len(all_chunks)} chunks into ChromaDB")
+            logger.info(f"Successfully processed {len(self.documents)} document chunks")
             
         except Exception as e:
             logger.error(f"Failed to load portfolio data: {e}")
             raise
     
-    def query_chromadb(self, query: str, n_results: int = 5) -> List[Dict[str, Any]]:
-        """Query ChromaDB for relevant documents"""
+    def query_documents(self, query: str, n_results: int = 5) -> List[Dict[str, Any]]:
+        """Query documents using TF-IDF similarity"""
         try:
-            # Generate embedding for the query
-            query_embedding = self.embedding_model.encode([query]).tolist()
+            # Transform query using fitted vectorizer
+            query_vector = self.vectorizer.transform([query])
             
-            # Search in ChromaDB
-            results = self.collection.query(
-                query_embeddings=query_embedding,
-                n_results=n_results
-            )
+            # Calculate cosine similarity
+            similarities = cosine_similarity(query_vector, self.document_vectors).flatten()
+            
+            # Get top results
+            top_indices = np.argsort(similarities)[::-1][:n_results]
             
             # Format results
             formatted_results = []
-            for i in range(len(results['documents'][0])):
-                formatted_results.append({
-                    'content': results['documents'][0][i],
-                    'metadata': results['metadatas'][0][i],
-                    'distance': results['distances'][0][i] if 'distances' in results else 0
-                })
+            for idx in top_indices:
+                if similarities[idx] > 0:  # Only include relevant results
+                    formatted_results.append({
+                        'content': self.documents[idx],
+                        'metadata': self.document_metadata[idx],
+                        'similarity': float(similarities[idx])
+                    })
             
             return formatted_results
             
         except Exception as e:
-            logger.error(f"Failed to query ChromaDB: {e}")
+            logger.error(f"Failed to query documents: {e}")
             return []
+    
+    def query_chromadb(self, query: str, n_results: int = 5) -> List[Dict[str, Any]]:
+        """Query documents (keeping same interface)"""
+        return self.query_documents(query, n_results)
     
     def generate_response_with_memory(self, query: str, context: str, conversation_history: List[str]) -> str:
         """Generate response using conversation history + RAG context"""
@@ -258,8 +322,8 @@ Response:"""
         if session_id not in self.conversations:
             self.conversations[session_id] = []
         
-        # Query ChromaDB for relevant context
-        relevant_docs = self.query_chromadb(message, n_results=3)
+        # Query documents for relevant context
+        relevant_docs = self.query_documents(message, n_results=3)
         context = "\n\n".join([doc['content'] for doc in relevant_docs])
         
         # Generate response with conversation history
@@ -297,7 +361,7 @@ Response:"""
         return {
             "active_sessions": len(self.conversations),
             "total_messages": total_messages,
-            "chromadb_documents": self.collection.count() if self.collection else 0
+            "chromadb_documents": len(self.documents) if self.documents else 0
         }
     
     def initialize_all(self):
