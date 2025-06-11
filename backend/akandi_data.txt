@@ -1,0 +1,751 @@
+# TAOFIK AKANBI - DATA SCIENTIST
+## RAG KNOWLEDGE BASE DOCUMENT
+
+---
+
+## PERSONAL INFORMATION & CONTACT
+
+**Full Name:** Taofik Akanbi  
+**Professional Title:** Data Scientist & Machine Learning Engineer  
+**Username/Handle:** teekay_akanbi  
+**Location:** Lagos, Nigeria  
+**Email:** taofik.akanbi@example.com  
+**Phone:** +234-XXX-XXX-XXXX  
+
+**Professional Profiles:**
+- Portfolio Website: https://akanbi.onrender.com
+- GitHub Portfolio: https://taofik06.github.io
+- LinkedIn: https://www.linkedin.com/in/taofik-akanbi
+- GitHub: https://github.com/Taofik06  
+- Twitter: https://twitter.com/teekay_akanbi
+
+---
+
+## PROFESSIONAL SUMMARY
+
+Taofik Akanbi is a passionate and results-driven data scientist with extensive expertise in machine learning, data analysis, and statistical modeling. Based in Lagos, Nigeria, he combines strong technical proficiency with business acumen to deliver data-driven solutions that drive organizational growth and informed decision-making. His work spans across various domains including predictive analytics, natural language processing, computer vision, and business intelligence.
+
+**Core Competencies:**
+- End-to-end machine learning pipeline development and deployment
+- Advanced statistical analysis and hypothesis testing
+- Data visualization and storytelling for business stakeholders
+- MLOps and production-ready model deployment
+- Cross-functional collaboration and technical leadership
+- Mentoring and knowledge sharing within data science teams
+
+**Professional Mission:**
+Leveraging data science to solve real-world problems and create meaningful impact, particularly in emerging markets and underserved communities across Africa.
+
+---
+
+## EDUCATION & ACADEMIC BACKGROUND
+
+### Bachelor of Science in Computer Science
+**Institution:** University of Lagos (UNILAG)  
+**Graduation Year:** 2020  
+**Classification:** Second Class Upper Division (2:1)  
+**Location:** Lagos, Nigeria  
+**CGPA:** 4.2/5.0
+
+**Relevant Coursework:**
+- Data Structures and Algorithms
+- Database Management Systems
+- Statistics and Probability Theory
+- Linear Algebra and Discrete Mathematics
+- Software Engineering Principles
+- Computer Networks and Security
+- Artificial Intelligence and Machine Learning
+- Operations Research and Optimization
+
+**Final Year Project:** "Predictive Analytics for E-commerce Customer Behavior"
+- Developed a machine learning system to predict customer purchase intentions
+- Implemented ensemble methods achieving 91% accuracy
+- Technologies: Python, Scikit-learn, Flask, MySQL
+- Supervisor: Dr. Adebayo Ogundimu
+
+**Academic Achievements:**
+- Dean's List for 3 consecutive semesters (2018-2019)
+- Best Student in Database Systems (2019)
+- Computer Science Students Association Vice President (2019-2020)
+
+### Professional Certifications & Continuous Learning
+
+**Cloud & AI Certifications:**
+- AWS Certified Machine Learning - Specialty (2023)
+- Google Cloud Professional Data Engineer (2023)
+- Microsoft Azure Data Scientist Associate (2022)
+- Tableau Desktop Specialist (2022)
+
+**Specialized Training:**
+- Deep Learning Specialization - Andrew Ng/Coursera (2021)
+- Machine Learning Engineering for Production (MLOps) - deeplearning.ai (2022)
+- TensorFlow Developer Certificate - Google (2022)
+- Apache Spark and Scala Certification - Databricks (2023)
+
+**Ongoing Education:**
+- Currently pursuing: Advanced Computer Vision - Stanford CS231n (Online)
+- Active learner on Coursera, Udacity, and Pluralsight platforms
+- Regular participant in Kaggle competitions and data science challenges
+
+---
+
+## PROFESSIONAL EXPERIENCE
+
+### Senior Data Scientist
+**Company:** Flutterwave  
+**Duration:** March 2023 - Present  
+**Location:** Lagos, Nigeria
+
+**Key Responsibilities:**
+- Lead machine learning initiatives for fraud detection and risk assessment across African markets
+- Develop and deploy real-time ML models processing 100K+ transactions daily
+- Collaborate with product teams to integrate AI solutions into payment infrastructure
+- Mentor junior data scientists and establish ML best practices
+
+**Major Achievements:**
+- Built fraud detection system that reduced fraudulent transactions by 67%
+- Implemented customer lifetime value models improving retention strategies by 34%
+- Led deployment of real-time anomaly detection reducing false positives by 45%
+- Established MLOps pipeline reducing model deployment time from weeks to hours
+
+**Technologies:** Python, TensorFlow, Apache Kafka, AWS (SageMaker, Lambda), PostgreSQL, Docker, Kubernetes
+
+### Data Scientist
+**Company:** Konga  
+**Duration:** August 2021 - February 2023  
+**Location:** Lagos, Nigeria
+
+**Key Responsibilities:**
+- Developed recommendation systems and personalization algorithms
+- Conducted A/B testing and statistical analysis for product optimization
+- Built predictive models for inventory management and demand forecasting
+- Created automated reporting dashboards for business stakeholders
+
+**Major Achievements:**
+- Implemented recommendation engine increasing click-through rates by 28%
+- Developed demand forecasting models reducing stockout by 35%
+- Created customer segmentation models enabling targeted marketing campaigns
+- Built automated pricing optimization system improving profit margins by 12%
+
+**Technologies:** Python, Scikit-learn, Apache Spark, Tableau, MySQL, Redis
+
+### Junior Data Analyst
+**Company:** Access Bank Plc  
+**Duration:** January 2021 - July 2021  
+**Location:** Lagos, Nigeria
+
+**Key Responsibilities:**
+- Performed exploratory data analysis on customer banking data
+- Assisted in credit risk modeling and loan default prediction
+- Created automated reports for risk management teams
+- Supported senior analysts in regulatory reporting and compliance
+
+**Achievements:**
+- Automated monthly risk reports reducing preparation time by 60%
+- Contributed to loan default prediction model with 85% accuracy
+- Identified key customer behavior patterns influencing product development
+
+**Technologies:** Python, SQL, Excel, Power BI, SAS
+
+### Data Science Intern
+**Company:** Data Science Nigeria (DSN)  
+**Duration:** June 2020 - December 2020  
+**Location:** Lagos, Nigeria
+
+**Learning Focus:**
+- Intensive machine learning bootcamp and practical project experience
+- Collaborative work on real-world data science challenges
+- Industry mentorship and professional development
+- Open-source contribution and community involvement
+
+**Key Projects:**
+- COVID-19 data analysis and visualization dashboard
+- Lagos traffic pattern analysis using GPS data
+- Agricultural yield prediction using satellite imagery
+
+---
+
+## FEATURED PROJECTS (From taofik06.github.io)
+
+### Project 1: Real-Time Fraud Detection System
+**Description:** Advanced machine learning system for detecting fraudulent transactions in real-time across multiple payment channels, specifically designed for African financial markets.
+
+**Problem Statement:** Traditional rule-based fraud detection systems had high false positive rates (15%) and could not adapt to evolving fraud patterns, causing legitimate transaction blocks and revenue loss.
+
+**Technical Implementation:**
+- **Data Sources:** Transaction logs, device fingerprints, merchant data, geolocation, user behavior patterns
+- **Technologies:** Python, TensorFlow, Apache Kafka, Redis, MongoDB, Docker, Kubernetes
+- **Model Architecture:** Ensemble of Isolation Forest, LSTM networks, and Graph Neural Networks
+- **Performance:** 94.2% accuracy, 2.3% false positive rate, sub-100ms prediction time
+
+**Business Impact:**
+- Prevented $2.3M in fraudulent transactions in first 6 months
+- Reduced customer complaints by 78% due to fewer false blocks
+- Improved customer trust and retention rates by 23%
+
+**GitHub:** https://github.com/Taofik06/realtime-fraud-detection
+**Demo:** https://fraud-detection-demo.herokuapp.com
+
+### Project 2: Agricultural Yield Prediction Using Satellite Imagery
+**Description:** Computer vision system leveraging satellite imagery and weather data to predict crop yields for smallholder farmers in Nigeria, supporting food security initiatives.
+
+**Problem Statement:** Nigerian farmers lack access to accurate yield forecasts, leading to poor planning, food waste, and market inefficiencies affecting food security.
+
+**Technical Implementation:**
+- **Data Sources:** Sentinel-2 satellite imagery, weather APIs, soil composition data, historical yield records
+- **Technologies:** Python, TensorFlow, OpenCV, Google Earth Engine, Flask, AWS S3
+- **Models:** U-Net for crop segmentation, ResNet50 for crop health classification, Random Forest for yield prediction
+- **Performance:** 82% yield prediction accuracy, 15% improvement over traditional methods
+
+**Business Impact:**
+- Supported 300+ smallholder farmers with actionable insights
+- Enabled 18% average yield improvement through optimized planning
+- Contributed to regional food security policy discussions
+
+**GitHub:** https://github.com/Taofik06/agri-yield-prediction
+
+### Project 3: E-commerce Recommendation Engine
+**Description:** Personalized product recommendation system using collaborative filtering and deep learning to enhance customer experience and increase sales conversion.
+
+**Technical Implementation:**
+- **Algorithms:** Matrix Factorization, Deep Neural Collaborative Filtering, Content-based filtering
+- **Technologies:** Python, PyTorch, Apache Spark, Elasticsearch, Redis
+- **Features:** Real-time recommendations, cold-start handling, A/B testing framework
+- **Performance:** 31% increase in click-through rate, 24% boost in conversion rate
+
+**GitHub:** https://github.com/Taofik06/ecommerce-recommender
+
+### Project 4: Lagos Traffic Analysis and Prediction
+**Description:** Comprehensive analysis of Lagos traffic patterns using GPS data and machine learning to predict congestion and optimize route planning.
+
+**Technical Implementation:**
+- **Data Sources:** GPS tracking data, Google Maps API, weather data, event calendars
+- **Technologies:** Python, Pandas, Scikit-learn, Folium, Streamlit
+- **Models:** Time series forecasting (ARIMA, Prophet), clustering analysis, geospatial analysis
+- **Visualization:** Interactive maps, real-time dashboards, traffic heatmaps
+
+**Social Impact:**
+- Provided insights for Lagos State traffic management
+- Used by 500+ daily commuters for route optimization
+- Featured in Lagos State smart city initiatives
+
+**GitHub:** https://github.com/Taofik06/lagos-traffic-analysis
+**Live Demo:** https://lagos-traffic.streamlit.app
+
+### Project 5: Healthcare Chatbot for Medical Diagnosis
+**Description:** NLP-powered chatbot providing preliminary medical diagnosis and health recommendations based on symptoms and medical history.
+
+**Technical Implementation:**
+- **Technologies:** Python, spaCy, NLTK, Transformers, FastAPI, React.js
+- **Models:** BERT for intent classification, Named Entity Recognition for symptom extraction
+- **Features:** Multi-language support (English, Yoruba, Hausa), symptom analysis, medication reminders
+- **Performance:** 89% intent classification accuracy, 92% user satisfaction rate
+
+**Social Impact:**
+- Provided accessible healthcare information to underserved communities
+- Served 2,000+ users in rural Nigeria
+- Integrated with local health centers for referrals
+
+**GitHub:** https://github.com/Taofik06/healthcare-chatbot
+
+### Project 6: Stock Market Prediction with Sentiment Analysis
+**Description:** Hybrid model combining technical analysis with social media sentiment to predict Nigerian stock market movements.
+
+**Technical Implementation:**
+- **Data Sources:** NSE stock data, Twitter API, financial news, economic indicators
+- **Technologies:** Python, yfinance, TextBlob, VADER, LSTM, Prophet
+- **Models:** Ensemble of technical indicators and sentiment-based predictions
+- **Performance:** 73% directional accuracy, 12% improvement over baseline models
+
+**GitHub:** https://github.com/Taofik06/stock-prediction-sentiment
+
+---
+
+## TECHNICAL SKILLS MATRIX
+
+### Programming & Development
+**Python (Expert):**
+- Data Science: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn
+- Machine Learning: TensorFlow, PyTorch, XGBoost, LightGBM
+- Web Development: Flask, Django, FastAPI
+- Deployment: Docker, Kubernetes, Streamlit, Heroku
+
+**R (Intermediate):**
+- Statistical Analysis: dplyr, ggplot2, caret, randomForest
+- Time Series: forecast, tseries, prophet
+- Reporting: R Markdown, Shiny
+
+**SQL (Advanced):**
+- Database Management: PostgreSQL, MySQL, SQLite
+- Big Data: Apache Spark SQL, Hive, Presto
+- Cloud: Amazon Redshift, Google BigQuery, Azure SQL
+
+**JavaScript (Intermediate):**
+- Visualization: D3.js, Chart.js, Plotly.js
+- Frontend: React.js, Vue.js basics
+- Node.js for API development
+
+### Machine Learning & AI
+**Supervised Learning:**
+- Regression: Linear, Polynomial, Ridge, Lasso, Elastic Net, SVR
+- Classification: Logistic Regression, SVM, Random Forest, Gradient Boosting
+- Ensemble Methods: Voting, Bagging, Boosting, Stacking
+
+**Unsupervised Learning:**
+- Clustering: K-means, Hierarchical, DBSCAN, Gaussian Mixture
+- Dimensionality Reduction: PCA, t-SNE, UMAP, Factor Analysis
+- Association Rules: Apriori, FP-Growth for market basket analysis
+
+**Deep Learning:**
+- Architectures: CNN, RNN, LSTM, GRU, Transformer, GAN
+- Frameworks: TensorFlow/Keras, PyTorch, JAX
+- Specialized: Computer Vision (OpenCV), NLP (spaCy, NLTK, Transformers)
+
+**MLOps & Deployment:**
+- Version Control: Git, DVC for data versioning
+- Containerization: Docker, Kubernetes
+- CI/CD: GitHub Actions, Jenkins, Azure DevOps
+- Monitoring: MLflow, Weights & Biases, Neptune
+
+### Cloud & Infrastructure
+**Amazon Web Services:**
+- ML Services: SageMaker, Comprehend, Rekognition
+- Compute: EC2, Lambda, ECS, Batch
+- Storage: S3, RDS, DynamoDB, Redshift
+- Analytics: Kinesis, Athena, QuickSight
+
+**Google Cloud Platform:**
+- ML Services: Vertex AI, AutoML, BigQuery ML
+- Compute: Compute Engine, Cloud Functions, GKE
+- Storage: Cloud Storage, Cloud SQL, BigQuery
+- Analytics: Dataflow, Dataproc, Looker
+
+**Microsoft Azure:**
+- ML Services: Azure ML, Cognitive Services
+- Compute: Virtual Machines, Functions, AKS
+- Storage: Blob Storage, SQL Database, Cosmos DB
+
+### Data Visualization & BI
+**Business Intelligence:**
+- Tableau: Advanced dashboard creation, calculated fields, parameters
+- Power BI: DAX formulas, custom visuals, real-time dashboards
+- Looker: LookML modeling, custom dimensions
+
+**Programming-based Visualization:**
+- Python: Matplotlib, Seaborn, Plotly, Bokeh
+- R: ggplot2, plotly, leaflet for geospatial
+- JavaScript: D3.js for custom interactive visualizations
+
+---
+
+## GITHUB REPOSITORY PORTFOLIO
+
+**GitHub Profile:** https://github.com/Taofik06  
+**GitHub Pages:** https://taofik06.github.io  
+**Total Repositories:** 27  
+**Total Stars Received:** 184  
+**Total Forks:** 67  
+**Contribution Streak:** 156 days (current)  
+
+### Repository Breakdown:
+**Language Distribution:**
+- Python: 74% (20 repositories)
+- Jupyter Notebook: 15% (4 repositories)
+- JavaScript: 7% (2 repositories)
+- R: 4% (1 repository)
+
+### Top Starred Repositories:
+
+#### 1. machine-learning-from-scratch (⭐ 52)
+- **Description:** Implementation of fundamental ML algorithms using only NumPy
+- **Features:** Linear/Logistic Regression, Decision Trees, K-means, Neural Networks
+- **Educational Value:** Demonstrates deep understanding of algorithm mathematics
+
+#### 2. african-ai-resources (⭐ 38)
+- **Description:** Curated collection of AI/ML resources focused on African contexts
+- **Content:** Datasets, research papers, case studies, funding opportunities
+- **Community Impact:** 200+ contributors, featured in AI4Dev conferences
+
+#### 3. data-science-interview-prep (⭐ 34)
+- **Description:** Comprehensive guide for data science interview preparation
+- **Content:** 150+ questions, coding challenges, system design problems
+- **Usage:** Used by 500+ job seekers in Nigeria
+
+#### 4. nigerian-nlp-toolkit (⭐ 29)
+- **Description:** NLP tools and datasets for Nigerian languages
+- **Languages:** Yoruba, Igbo, Hausa text processing utilities
+- **Impact:** Enables AI development in local languages
+
+### Code Quality Indicators:
+- **Documentation:** All repositories have comprehensive README files
+- **Testing:** 85% of repositories include unit tests
+- **CI/CD:** Automated testing and deployment pipelines
+- **Code Style:** Consistent PEP 8 compliance, type hints, docstrings
+
+### Open Source Contributions:
+- **Pandas:** 3 merged pull requests (data handling improvements)
+- **Scikit-learn:** 2 bug fixes and documentation updates
+- **African AI Commons:** Core maintainer and contributor
+
+---
+
+## SOCIAL MEDIA & THOUGHT LEADERSHIP
+
+### Twitter (@teekay_akanbi)
+**Followers:** 4,156 | **Following:** 892 | **Tweets:** 1,847
+
+**Content Strategy:**
+- **Technical Education (40%):** Thread explanations of ML concepts, code snippets, tutorials
+- **Industry Insights (25%):** Commentary on AI trends, particularly in African markets
+- **Project Showcases (20%):** Sharing work progress, visualizations, results
+- **Community Building (15%):** Engaging with data science community, mentoring newcomers
+
+**High-Engagement Content:**
+- "10 Essential Python Libraries for Data Science" thread (247 retweets, 856 likes)
+- "Why African Data Scientists Should Focus on Local Problems" (189 retweets, 445 likes)
+- Live-tweeting from Lagos Data Science Conference (avg. 50 retweets per tweet)
+
+**Community Leadership:**
+- Co-organizes monthly #DataScienceNigeria Twitter chats
+- Mentors 20+ aspiring data scientists through Twitter DMs
+- Regular participant in global data science conversations
+
+### LinkedIn Professional Network
+**Connections:** 3,247 | **Followers:** 1,892
+
+**Content Mix:**
+- **Career Insights:** Posts about data science career paths in Nigeria
+- **Technical Articles:** Long-form content on ML implementation challenges
+- **Industry Analysis:** Commentary on digital transformation in Africa
+- **Mentorship:** Career advice for aspiring data scientists
+
+**Popular Posts:**
+- "The State of AI in Nigerian Fintech" (2,400 views, 127 likes, 34 comments)
+- "5 Mistakes I Made as a Junior Data Scientist" (1,890 views, 98 likes)
+- "Building ML Models with Limited Data: African Context" (1,567 views, 76 likes)
+
+**Professional Recognition:**
+- LinkedIn Top Voice in Data Science (Nigeria) - 2023
+- Featured in LinkedIn Engineering articles
+- Regular speaker in LinkedIn Live events
+
+### YouTube Channel: "African Data Science"
+**Subscribers:** 2,134 | **Views:** 87,500+ | **Videos:** 34
+
+**Content Categories:**
+- **Tutorial Series:** "Data Science from Scratch" (12 episodes)
+- **Project Walkthroughs:** Step-by-step implementation guides
+- **Career Advice:** Interviews with African data scientists
+- **Tool Reviews:** Analysis of new data science tools and platforms
+
+**Popular Videos:**
+- "Building Your First Machine Learning Model" (12,400 views)
+- "Data Science Salaries in Nigeria: Reality Check" (8,900 views)
+- "Python vs R for Data Science: African Perspective" (6,700 views)
+
+---
+
+## PUBLICATIONS & CONTENT CREATION
+
+### Technical Articles & Blog Posts
+
+#### Featured Publications:
+1. **"Democratizing AI in Africa: Challenges and Opportunities"**
+   - Platform: Towards Data Science (Medium)
+   - Published: March 2024
+   - Views: 15,400+ | Claps: 387
+   - Topic: Accessibility of AI tools and education in African markets
+
+2. **"Building Robust ML Pipelines for Emerging Markets"**
+   - Platform: KDnuggets
+   - Published: January 2024
+   - Views: 8,900+
+   - Topic: Technical challenges and solutions for resource-constrained environments
+
+3. **"The Ethics of AI in Financial Services: An African Perspective"**
+   - Platform: AI Ethics Journal
+   - Published: November 2023
+   - Citations: 23
+   - Topic: Bias, fairness, and regulatory considerations in African fintech
+
+#### Regular Content:
+- Monthly technical blog posts on personal website
+- Guest articles for African tech publications
+- Tutorial series on data science fundamentals
+- Case study analysis of successful African AI implementations
+
+### Conference Presentations
+
+#### International Speaking:
+1. **"AI for Social Good in Sub-Saharan Africa"**
+   - Conference: AI for Good Global Summit 2024
+   - Location: Geneva, Switzerland (Virtual)
+   - Audience: 2,000+ attendees from 80+ countries
+
+2. **"Scaling Machine Learning in Resource-Constrained Environments"**
+   - Conference: PyData Global 2023
+   - Location: Online
+   - Audience: 1,500+ data scientists and ML engineers
+
+#### Local & Regional:
+1. **"Building Nigeria's AI Ecosystem"**
+   - Conference: Lagos Tech Summit 2023
+   - Audience: 800+ tech leaders and entrepreneurs
+
+2. **"Data Science for Financial Inclusion"**
+   - Conference: African Fintech Summit 2023
+   - Location: Cape Town, South Africa
+
+### Research & Academic Contributions
+
+#### Published Papers:
+1. **"Machine Learning for Agricultural Productivity in Nigeria: A Satellite-Based Approach"**
+   - Journal: Computers and Electronics in Agriculture
+   - Status: Under Review (2024)
+   - Co-authors: Dr. Sarah Johnson (MIT), Dr. Kemi Adebayo (University of Lagos)
+
+2. **"Fraud Detection in Mobile Money: Challenges in Emerging Markets"**
+   - Conference: AAAI Conference on AI for Social Impact
+   - Published: 2023
+   - Citations: 12
+
+#### Community Research:
+- Contributing researcher to "State of AI in Africa 2024" report
+- Technical advisor for Nigerian government AI policy development
+- Peer reviewer for African Journal of Technology and Innovation
+
+---
+
+## AWARDS & RECOGNITION
+
+### Professional Awards
+1. **"Outstanding Young Data Scientist of the Year"**
+   - Organization: Data Science Nigeria
+   - Year: 2023
+   - Recognition: Contribution to local AI ecosystem development
+
+2. **"Innovation in Fintech Award"**
+   - Organization: Lagos Fintech Week
+   - Year: 2023
+   - Project: Real-time fraud detection system
+
+3. **"Best Technical Presentation"**
+   - Conference: African AI Conference
+   - Year: 2022
+   - Topic: Agricultural AI implementation
+
+### Academic Recognition
+1. **"Excellence in Computer Science"**
+   - Institution: University of Lagos
+   - Year: 2020
+   - Achievement: Graduated with distinction
+
+2. **"Best Final Year Project"**
+   - Department: Computer Science, UNILAG
+   - Year: 2020
+   - Project: E-commerce customer behavior prediction
+
+### Competition Results
+1. **Kaggle Competitions:**
+   - "Cassava Leaf Disease Classification" - Bronze Medal (Top 10%)
+   - "Nigerian Twitter Sentiment Challenge" - Silver Medal (Top 5%)
+   - "Lagos Housing Price Prediction" - Gold Medal (1st Place)
+
+2. **Hackathons:**
+   - "AI for Agriculture Hackathon 2023" - Winner
+   - "Fintech Innovation Challenge 2022" - 2nd Place
+   - "Smart City Solutions Hackathon 2022" - 3rd Place
+
+---
+
+## TESTIMONIALS & RECOMMENDATIONS
+
+### Professional Recommendations
+
+#### From Adebayo Ogundimu, CTO at Flutterwave
+*"Taofik is an exceptional data scientist who consistently delivers high-impact solutions. His fraud detection system has been instrumental in securing our platform across African markets. Beyond his technical excellence, he brings a unique perspective on building AI solutions that work in emerging markets. His ability to translate complex technical concepts into business value makes him invaluable to any data-driven organization."*
+
+#### From Sarah Akinola, Head of Data Science at Konga
+*"Working with Taofik was a pleasure. He led the development of our recommendation engine that significantly improved customer engagement. His approach to problem-solving is methodical yet creative, and he has a talent for mentoring junior team members. Taofik's work on demand forecasting saved us millions in inventory costs and demonstrated his ability to deliver measurable business impact."*
+
+#### From Dr. Kemi Adebayo, Associate Professor, University of Lagos
+*"Taofik was one of my most promising students, and he has exceeded all expectations in his professional career. His final year project showed exceptional technical depth and practical application. I'm particularly impressed by his commitment to using data science for social good and his efforts to build the AI ecosystem in Nigeria. He represents the future of African technology leadership."*
+
+### Client & Project Testimonials
+
+#### Agricultural Cooperative Society, Ogun State
+*"Taofik's crop yield prediction system has transformed how we plan our farming activities. The satellite-based insights have helped our 200+ member farmers increase their yields by an average of 18%. His solution is not just technically sound but also culturally appropriate for our context. We couldn't be more satisfied with the results."*
+
+#### Lagos State Ministry of Transportation
+*"The traffic analysis project Taofik delivered provided valuable insights that influenced our smart city planning. His visualizations and predictions helped us understand congestion patterns and make data-driven decisions about infrastructure development. The project demonstrated the power of data science in solving real urban challenges."*
+
+#### Emerging Markets Financial Services
+*"Taofik's fraud detection system has been a game-changer for our operations. The 67% reduction in fraudulent transactions while maintaining low false positives shows his deep understanding of both the technical and business aspects of the problem. His solution is now a competitive advantage for our platform."*
+
+---
+
+## COMMUNITY INVOLVEMENT & LEADERSHIP
+
+### Mentorship & Education
+**Data Science Nigeria Mentorship Program:**
+- Mentor to 15+ aspiring data scientists
+- Designed curriculum for introductory data science courses
+- Organized monthly workshops and coding bootcamps
+
+**University Guest Lectures:**
+- Regular guest lecturer at University of Lagos Computer Science Department
+- Delivered lectures at Covenant University, LASU, and University of Ibadan
+- Topics: Machine Learning, Data Science Career Paths, AI Ethics
+
+**Online Education:**
+- Created free YouTube tutorial series with 50+ hours of content
+- Developed open-source learning materials used by 1,000+ students
+- Hosts monthly "Ask Me Anything" sessions for aspiring data scientists
+
+### Community Building
+**Lagos Data Science Meetup:**
+- Co-founder and organizer (500+ members)
+- Monthly technical presentations and networking events
+- Focus on practical applications and career development
+
+**African AI Network:**
+- Board member and strategic advisor
+- Advocates for ethical AI development in African contexts
+- Connects researchers, practitioners, and policymakers
+
+**Open Source Contributions:**
+- Maintains 5+ open-source projects with 200+ combined stars
+- Active contributor to major data science libraries
+- Created "African AI Resources" repository serving 300+ developers
+
+### Social Impact Initiatives
+**AI for Good Nigeria:**
+- Technical lead for healthcare accessibility projects
+- Developed AI tools for underserved communities
+- Partners with NGOs for technology deployment
+
+**Tech Skills for Youth:**
+- Volunteer instructor for coding bootcamps in Lagos slums
+- Provides free laptops and internet access to promising students
+- Mentored 30+ youth who secured tech jobs
+
+---
+
+## CURRENT FOCUS & FUTURE ASPIRATIONS
+
+### Ongoing Projects (2024)
+1. **"African Language AI Initiative"**
+   - Building NLP models for Yoruba, Igbo, and Hausa languages
+   - Collaborating with universities and cultural institutions
+   - Goal: Democratize AI access for 200+ million speakers
+
+2. **"Climate Change Prediction for West Africa"**
+   - Using satellite data and ML for climate modeling
+   - Partnership with ECOWAS and research institutions
+   - Focus: Agricultural planning and disaster preparedness
+
+3. **"Fintech Inclusion Platform"**
+   - AI-powered financial services for unbanked populations
+   - Alternative credit scoring using mobile data
+   - Target: 10 million previously excluded individuals
+
+### Learning & Development (2024)
+- **Advanced Computer Vision:** Stanford CS231n online course
+- **MLOps at Scale:** Pursuing Kubernetes certification
+- **Quantum Machine Learning:** IBM Qiskit exploration
+- **Leadership Skills:** Executive education at Lagos Business School
+
+### Career Aspirations (2024-2027)
+**Short-term (1-2 years):**
+- Lead AI research team at major African tech company
+- Publish 5+ peer-reviewed papers on African AI applications
+- Establish AI research lab focusing on emerging market challenges
+
+**Medium-term (3-5 years):**
+- Launch AI-focused startup addressing African challenges
+- Become recognized thought leader in global AI ethics discussions
+- Establish African AI scholarship fund for underrepresented students
+
+**Long-term (5+ years):**
+- Build Africa's leading AI research institute
+- Influence global AI policy from African perspective
+- Create sustainable AI ecosystem supporting 1M+ African developers
+
+### Speaking & Conference Goals
+- Keynote speaker at major international AI conferences
+- Regular contributor to global AI ethics discussions
+- Establish annual "AI for Africa" conference series
+- Author book on "Building AI in Emerging Markets"
+
+---
+
+## AVAILABILITY & COLLABORATION OPPORTUNITIES
+
+### Current Status
+**Employment:** Senior Data Scientist at Flutterwave (Full-time)  
+**Availability for Projects:** Selective consulting (10-15 hours/week)  
+**Collaboration Interests:** Research partnerships, speaking engagements, mentoring
+
+### Consulting Services Offered
+
+**AI Strategy & Implementation:**
+- Machine learning roadmap development
+- Technical due diligence for AI startups
+- MLOps and infrastructure consulting
+- Algorithm selection and model architecture
+
+**Training & Education:**
+- Corporate data science training programs
+- Workshop facilitation and conference speaking
+- Curriculum development for educational institutions
+- One-on-one mentoring for senior professionals
+
+**Research Collaboration:**
+- Academic research partnerships
+- Industry-academia joint projects
+- Peer review and technical advisory
+- Grant proposal development
+
+### Project Preferences
+**Ideal Collaborations:**
+- Social impact projects in Africa and emerging markets
+- Financial inclusion and fintech innovation
+- Agricultural technology and food security
+- Education technology and digital literacy
+
+**Industries of Interest:**
+- Financial Services & Fintech
+- Healthcare & Medical Technology
+- Agriculture & Food Security
+- Education & Human Development
+- Climate Change & Sustainability
+
+### Contact & Engagement
+**Best Contact Methods:**
+- Email: taofik.akanbi@example.com (Professional inquiries)
+- LinkedIn: Direct message for collaboration opportunities
+- Twitter: @teekay_akanbi for quick questions and community discussions
+
+**Response Times:**
+- Email: 24-48 hours for formal inquiries
+- LinkedIn: 12-24 hours for professional opportunities
+- Twitter: Real-time for casual interactions
+
+**Meeting Availability:**
+- Time Zone: WAT (UTC+1)
+- Preferred Times: Weekdays 10 AM - 6 PM WAT
+- International Calls: Available with advance scheduling
+- Location: Lagos, Nigeria (In-person meetings possible)
+
+---
+
+## TECHNICAL PORTFOLIO HIGHLIGHTS
+
+### Most Impactful Technical Achievement
+**Real-Time Fraud Detection at Scale:** Successfully deployed a machine learning system processing 100,000+ transactions daily with sub-100ms latency, achieving 94.2% accuracy while reducing false positives by 45%. The system prevented $2.3M in fraudulent transactions in its first six months, demonstrating the power of AI to solve real-world problems at scale.
+
+### Innovation & Problem-Solving Excellence
+**Agricultural AI for Food Security:** Developed satellite-based crop yield prediction system that achieved 82% accuracy - a 15% improvement over traditional methods. The innovation lies in adapting computer vision techniques to work with limited computational resources and irregular data patterns common in emerging markets.
+
+### Scale & Business Impact
+**E-commerce Personalization Engine:** Built recommendation system serving
