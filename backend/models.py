@@ -21,7 +21,7 @@ class Config:
     CORS_ORIGINS = [
         "http://localhost:3000", 
         "http://localhost:5173", 
-        "https://akanbi.onrender.com"
+        "https://akanbi.onrender.com",
         "https://akanbi-taofik.onrender.com"
     ]
     CHROMA_DB_PATH = "./chroma_db"
