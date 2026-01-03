@@ -2,7 +2,7 @@
 
 Personal portfolio website for Taofik Akanbi, Data Scientist & Machine Learning Engineer, featuring an intelligent AI chatbot that answers questions about his experience, skills, and projects using Retrieval-Augmented Generation (RAG).
 
-🔗 **Live Site**: [https://akanbi.onrender.com](https://akanbi.onrender.com)
+🔗 **Live Site**: [https://akanbi-taofik.onrender.com/](https://akanbi-taofik.onrender.com/)
 
 ## Features
 
