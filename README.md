@@ -212,6 +212,9 @@ This project is deployed on **Render**:
 
 ## Contact
 
-abdullahbadru66@gmail.com
-https://www.linkedin.com/in/abdullahibadrudeen
+**Abdullah Badrudeen**  
+**AI Developer**
+
+abdullahbadru66@gmail.com  
+https://www.linkedin.com/in/abdullahibadrudeen  
 +234 903 4869 909
